@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class RainSpawner : MonoBehaviour
 {
-    [SerializeField, Tooltip("雨のプレハブ")] GameObject _rain;
-    [SerializeField, Tooltip("1レベル上がるまでの時間(秒)")] float _levelUpTime;
-    [SerializeField,Tooltip("レベルごとの雨発生判定をする頻度(秒)")] List<float> _frequency = new List<float>();
+    [SerializeField] RainManager _rm;
 
-    private int _level;
-    private float _offset = 1.5f;
+    private float _posOffset = 1.5f;
     private float _judgeInterval;
-    private float _lastLevelUp;
+
+    private void Awake()
+    {
+        _judgeInterval = _rm.JudgeInterval;
+        _judgeInterval += Random.Range(0f, _rm.Frequency[0] - 1);
+    }
 
     private void Start()
     {
@@ -22,16 +24,11 @@ public class RainSpawner : MonoBehaviour
     {
         _judgeInterval += Time.deltaTime;
 
-        if(_judgeInterval > _frequency[_level])
+        if(_judgeInterval > _rm.Frequency[_rm.Level])
         {
             GenerateRain();
 
             _judgeInterval = 0f;
-        }
-
-        if(Time.time - _lastLevelUp >= _levelUpTime)
-        {
-            LevelUp();
         }
     }
 
@@ -40,17 +37,11 @@ public class RainSpawner : MonoBehaviour
         if (Random.Range(0f, 1f) > 0.5f)
         {
             Debug.Log("発生したよ");
-            Instantiate(_rain, new Vector2(Random.Range(transform.position.x - _offset, transform.position.x + _offset), transform.position.y), Quaternion.identity);
+            Instantiate(_rm.Rain, new Vector2(Random.Range(transform.position.x - _posOffset, transform.position.x + _posOffset), transform.position.y), Quaternion.identity);
         }
         else
         {
             Debug.Log("発生しなかったよ");
         }
-    }
-
-    private void LevelUp()
-    {
-        Debug.Log("レベルアップしたよ");
-        _level++;
     }
 }

@@ -94,19 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd901006112fb046a2f2eaa686613f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
-  _levelUpTime: 180
-  _frequency:
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
-  - 5
-  - 4
-  - 3
-  - 2
-  - 1
+  _rm: {fileID: 6053208603636018188}
 --- !u!1 &4481501531646055975
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,19 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd901006112fb046a2f2eaa686613f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
-  _levelUpTime: 180
-  _frequency:
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
-  - 5
-  - 4
-  - 3
-  - 2
-  - 1
+  _rm: {fileID: 6053208603636018188}
 --- !u!1 &5730688871480708402
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,19 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd901006112fb046a2f2eaa686613f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
-  _levelUpTime: 180
-  _frequency:
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
-  - 5
-  - 4
-  - 3
-  - 2
-  - 1
+  _rm: {fileID: 6053208603636018188}
 --- !u!1 &6562646198726047440
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,19 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd901006112fb046a2f2eaa686613f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
-  _levelUpTime: 180
-  _frequency:
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
-  - 5
-  - 4
-  - 3
-  - 2
-  - 1
+  _rm: {fileID: 6053208603636018188}
 --- !u!1 &7055176206105454031
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,19 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd901006112fb046a2f2eaa686613f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
-  _levelUpTime: 180
-  _frequency:
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
-  - 5
-  - 4
-  - 3
-  - 2
-  - 1
+  _rm: {fileID: 6053208603636018188}
 --- !u!1 &7157242523895772476
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,19 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd901006112fb046a2f2eaa686613f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
-  _levelUpTime: 180
-  _frequency:
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
-  - 5
-  - 4
-  - 3
-  - 2
-  - 1
+  _rm: {fileID: 6053208603636018188}
 --- !u!1 &7180120333026972111
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7180120333026972113}
+  - component: {fileID: 6053208603636018188}
   m_Layer: 0
   m_Name: RainSpawner
   m_TagString: Untagged
@@ -678,3 +607,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6053208603636018188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180120333026972111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dbd3c3ba8b9de43955976e386da831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rain: {fileID: 0}
+  _levelUpTime: 180
+  _frequency:
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
+  - 5
+  - 4
+  - 3
+  - 2
+  - 1
