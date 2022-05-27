@@ -13,14 +13,7 @@ public class TimeController : MonoBehaviour
 
     void Update()
     {
-        if (_isStop) { return; }
-
         _timer += Time.deltaTime;
         _text.text = "タイム:" + _timer.ToString("f1");
-    }
-
-    public void ControlTime()
-    {
-        _isStop ^= true;
     }
 }
