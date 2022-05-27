@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
     public float Speed => _speed;
     [Tooltip("プレイヤーの体力")]
     [SerializeField] int _hp = 3;
-    [Tooltip("体力ゲージ")]
-    [SerializeField] Slider _hpGage;
-    Rigidbody2D _rb;
-    public bool _isMuteki { get; set; } = false;
-
+    
+    public int HpMax { get; private set; }
+    public float DefaultSpeed { get; private set; }
+    public bool IsMuteki { get; set; } = false;
+    public int HP { get { return _hp; } set { _hp = value; } }
     public float SetSpped
     {
         set
@@ -23,8 +23,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    Rigidbody2D _rb;
+
     void Start()
     {
+        HpMax = _hp;
+        DefaultSpeed = _speed;
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -42,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(_isMuteki)
+        if(IsMuteki)
         {
             return;
         }
@@ -51,6 +55,5 @@ public class PlayerController : MonoBehaviour
         {
             _hp--;
         }
-
     }
 }
