@@ -16,7 +16,7 @@ public class TimeController : MonoBehaviour
         if (_isStop) { return; }
 
         _timer += Time.deltaTime;
-        _text.text = _timer.ToString("f1");
+        _text.text = "タイム:" + _timer.ToString("f1");
     }
 
     public void ControlTime()
