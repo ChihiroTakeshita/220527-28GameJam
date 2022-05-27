@@ -9,6 +9,7 @@ public class RainFall : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     //[SerializeField] Sprite hitRain;
     [SerializeField] CircleCollider2D col;
+    Transform myTransform;
 
 
     // Start is called before the first frame update
@@ -22,10 +23,7 @@ public class RainFall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -10 || transform.position.x < -6)
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,11 +36,28 @@ public class RainFall : MonoBehaviour
             //spriteRenderer.sprite = hitRain;
 
             _rb.velocity = new Vector2(-0.1f, 0.2f) * speed;
-            Destroy(gameObject, 0.3f);
+            Destroy(gameObject, 0.2f);
 
             /*Instantiate(HitRain, transform.position, Quaternion.identity);
             Destroy(HitRain, 0.2f); ←これでエラー出た　
             から、spriteRendererを変更してDestroyする形に変更　*/
         }
+
+        /*playerに当たった時の挙動を変えたかったけどむりでした。
+        if (other.gameObject.tag == "Player")
+        {
+            col.enabled = false;
+
+            spriteRenderer.color = Color.blue;
+            //spriteRenderer.sprite = hitRain;
+
+            Vector2 playerPos = other.transform.position;
+            Vector2 rainPos = myTransform.position;
+            Vector2 direction = (rainPos - playerPos).normalized;
+            _rb.velocity = -direction * speed;
+
+            //_rb.velocity = new Vector2(-0.1f, 0.2f) * speed;
+            Destroy(gameObject, 0.3f);
+        }*/
     }
 }
