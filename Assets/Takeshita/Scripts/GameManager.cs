@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager _manager;
+
     private float _startTime;
     private float _resultTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float ResultTime { get => _resultTime; private set => _resultTime = value; }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if(_manager)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _manager = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     /// <summary>
@@ -33,6 +38,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void FinishGame()
     {
-        _resultTime = _startTime - Time.time;
+        ResultTime = _startTime - Time.time;
     }
 }
