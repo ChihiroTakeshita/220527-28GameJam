@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[RequireComponent ((typeof (Rigidbody2D)), (typeof(CircleCollider2D)))]
+[RequireComponent((typeof(Rigidbody2D)), (typeof(CircleCollider2D)))]
 public class PlayerController : MonoBehaviour
 {
     [Tooltip("プレイヤーの移動速度")]
@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("プレイヤーの体力")]
     [SerializeField] int _hp = 3;
     [Tooltip("体力ゲージ")]
-    [SerializeField]Slider _hpGage;
+    [SerializeField] Slider _hpGage;
     Rigidbody2D _rb;
+    public bool _isMuteki { get; set; } = false;
 
     public float SetSpped
     {
@@ -41,9 +42,15 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Rain")
+        if(_isMuteki)
+        {
+            return;
+        }
+
+        if (collision.gameObject.tag == "Rain")
         {
             _hp--;
         }
+
     }
 }
