@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dbd3c3ba8b9de43955976e386da831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 0}
+  _rain: {fileID: 8309461576444371854, guid: 94dad833d0d49ba49a65e55b84fd0e36, type: 3}
   _levelUpTime: 180
   _frequency:
   - 10
