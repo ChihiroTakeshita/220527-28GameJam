@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager _manager;
+    private static GameManager _manager;
 
     private float _startTime;
     private float _resultTime;
 
     public float ResultTime { get => _resultTime; private set => _resultTime = value; }
+    public static GameManager Instance { get => _manager; private set => _manager = value; }
 
     private void Awake()
     {
-        if(_manager)
+        if(Instance)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            _manager = this;
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
     }
