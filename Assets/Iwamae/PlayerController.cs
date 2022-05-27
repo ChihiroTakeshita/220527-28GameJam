@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float DefaultSpeed { get; private set; }
     public bool IsMuteki { get; set; } = false;
     public int HP { get { return _hp; } set { _hp = value; } }
-    public float SetSpped
+    public float SetSpeed
     {
         set
         {
