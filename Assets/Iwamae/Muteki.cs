@@ -27,7 +27,7 @@ public class Muteki : ItemBase
             if (_player)
             {
                 Debug.Log("無敵中");
-                _player._isMuteki = true;
+                _player.IsMuteki = true;
                 StartCoroutine(DurationItem());
             }
         }
@@ -36,7 +36,7 @@ public class Muteki : ItemBase
     IEnumerator DurationItem()
     {
         yield return new WaitForSeconds(_duration);
-        _player._isMuteki = false;
+        _player.IsMuteki = false;
         Debug.Log("無敵終了");
         Destroy();
     }
