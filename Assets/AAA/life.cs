@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using System.Collections;
+public class LifeScript : MonoBehaviour
+{
+
+	RectTransform rt;
+
+	void Start()
+	{
+		rt = GetComponent<RectTransform>();
+	}
+
+	public void LifeDown(int ap)
+	{
+		rt.sizeDelta -= new Vector2(0, ap);
+	}
+	public void LifeUp(int hp)
+	{
+		rt.sizeDelta += new Vector2(0, hp);
+		if (rt.sizeDelta.y > 100f)
+		{
+			rt.sizeDelta = new Vector2(51f, 100f);
+		}
+	}
+}
