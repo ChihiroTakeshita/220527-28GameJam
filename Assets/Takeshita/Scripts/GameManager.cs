@@ -8,9 +8,13 @@ public class GameManager : MonoBehaviour
 
     private float _startTime;
     private float _resultTime;
+    private static int _score;
+    private static float _bonus = 1f;
 
     public float ResultTime { get => _resultTime; private set => _resultTime = value; }
     public static GameManager Instance { get => _manager; private set => _manager = value; }
+    public static int Score { get => _score; private set => _score = value; }
+    public static float Bonus { get => _bonus; set => _bonus = value; }
 
     private void Awake()
     {
@@ -23,6 +27,10 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+    }
+    private void Update()
+    {
+        Score += (int)(Time.deltaTime * Bonus);
     }
 
     /// <summary>

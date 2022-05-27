@@ -15,10 +15,10 @@ public class RainSpawner : MonoBehaviour
         _judgeInterval += Random.Range(0f, _rm.Frequency[0] - 1);
     }
 
-    private void Start()
-    {
-        GenerateRain();
-    }
+    //private void Start()
+    //{
+    //    GenerateRain();
+    //}
 
     private void Update()
     {

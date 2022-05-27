@@ -10,14 +10,14 @@ public class RainManager : MonoBehaviour
 
     private int _level;
     private float _judgeInterval;
-    private float _lastLevelUp;
+    private float _levelUpInterval;
 
     public GameObject Rain { get => _rain; private set => _rain = value; }
     public float LevelUpTime { get => _levelUpTime; private set => _levelUpTime = value; }
     public List<float> Frequency { get => _frequency; private set => _frequency = value; }
     public int Level { get => _level; private set => _level = value; }
     public float JudgeInterval { get => _judgeInterval; private set => _judgeInterval = value; }
-    public float LastLevelUp { get => _lastLevelUp;private set => _lastLevelUp = value; }
+    public float LevelUpInterval { get => _levelUpInterval;private set => _levelUpInterval = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -28,15 +28,21 @@ public class RainManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - LastLevelUp >= LevelUpTime)
+        LevelUpInterval += Time.deltaTime;
+
+        if (LevelUpInterval >= LevelUpTime)
         {
             LevelUp();
+            LevelUpInterval = 0;
         }
     }
 
     private void LevelUp()
     {
-        Debug.Log("レベルアップしたよ");
-        _level++;
+        if(_level < _frequency.Count - 1)
+        {
+            _level++;
+            Debug.Log($"レベルアップしたよ 現在のレベル：{_level}");
+        }
     }
 }
