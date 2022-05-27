@@ -12,6 +12,8 @@ public class ChangeSpeed : ItemBase
     [SerializeField] float _setSpeed = 10f;
     [Tooltip("アイテムの効果時間")]
     [SerializeField] float _duration = 1.0f;
+    [Tooltip("ボーナス倍率")]
+    [SerializeField] int _magnification = 2;
 
     float _saveSpeed = 5.0f;
     PlayerController _player;
@@ -40,8 +42,10 @@ public class ChangeSpeed : ItemBase
 
     IEnumerator DurationItem() 
     {
+        GameManager.Bonus = _magnification;
         yield return new WaitForSeconds(_duration);
         _player.SetSpeed = _saveSpeed;
+        GameManager.Bonus = 1;
         Destroy();
     }
 }
