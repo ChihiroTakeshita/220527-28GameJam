@@ -15,9 +15,10 @@ public class RainFall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = Random.Range(3, 6);
+        speed = Random.Range(3, 7);
         _rb = GetComponent<Rigidbody2D>();
         _rb.velocity = new Vector2(-0.6f, -1.0f) * speed;
+        myTransform = transform;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class RainFall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Field")
+        if(other.gameObject.tag == "Field")
         {
             col.enabled = false;
 
@@ -36,14 +37,14 @@ public class RainFall : MonoBehaviour
             //spriteRenderer.sprite = hitRain;
 
             _rb.velocity = new Vector2(-0.1f, 0.2f) * speed;
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 0.3f);
 
             /*Instantiate(HitRain, transform.position, Quaternion.identity);
             Destroy(HitRain, 0.2f); ←これでエラー出た　
             から、spriteRendererを変更してDestroyする形に変更　*/
         }
 
-        /*playerに当たった時の挙動を変えたかったけどむりでした。
+        //playerに当たった時の挙動を変えたかったです
         if (other.gameObject.tag == "Player")
         {
             col.enabled = false;
@@ -54,10 +55,10 @@ public class RainFall : MonoBehaviour
             Vector2 playerPos = other.transform.position;
             Vector2 rainPos = myTransform.position;
             Vector2 direction = (rainPos - playerPos).normalized;
-            _rb.velocity = -direction * speed;
+            _rb.velocity = direction * speed * 0.3f;
 
             //_rb.velocity = new Vector2(-0.1f, 0.2f) * speed;
-            Destroy(gameObject, 0.3f);
-        }*/
+            Destroy(gameObject, 0.2f);
+        }
     }
 }
