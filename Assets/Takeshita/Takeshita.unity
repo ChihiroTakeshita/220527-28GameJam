@@ -216,6 +216,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8933405093708678861, guid: dcc67a985fd6c51498e98a4be503434a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933405093708678861, guid: dcc67a985fd6c51498e98a4be503434a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
         type: 3}
       propertyPath: m_RootOrder
@@ -223,38 +233,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
-        type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+      value: -2.02
       objectReference: {fileID: 0}
     - target: {fileID: 8933405093708678863, guid: dcc67a985fd6c51498e98a4be503434a,
         type: 3}
@@ -457,6 +437,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4279131219565530256, guid: 6d4fd83af854e4f41bd1198c640d70eb,
+        type: 3}
+      propertyPath: _frequency
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279131219565530256, guid: 6d4fd83af854e4f41bd1198c640d70eb,
+        type: 3}
+      propertyPath: _items.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279131219565530256, guid: 6d4fd83af854e4f41bd1198c640d70eb,
+        type: 3}
+      propertyPath: _items.Array.data[0]
+      value: 
+      objectReference: {fileID: 2293429042335558324, guid: c205699104ce90a4e9f76a9d3a0ebe63,
+        type: 3}
     - target: {fileID: 6816797399838479832, guid: 6d4fd83af854e4f41bd1198c640d70eb,
         type: 3}
       propertyPath: m_RootOrder
@@ -536,6 +532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RainSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180120333026972111, guid: 35d938d45ce25e340946fcdc1f2c2637,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7180120333026972113, guid: 35d938d45ce25e340946fcdc1f2c2637,
         type: 3}
