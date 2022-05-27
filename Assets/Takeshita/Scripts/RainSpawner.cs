@@ -9,6 +9,7 @@ public class RainSpawner : MonoBehaviour
     [SerializeField,Tooltip("レベルごとの雨発生判定をする頻度(秒)")] List<float> _frequency = new List<float>();
 
     private int _level;
+    private float _offset = 1.5f;
     private float _judgeInterval;
     private float _lastLevelUp;
 
@@ -39,7 +40,7 @@ public class RainSpawner : MonoBehaviour
         if (Random.Range(0f, 1f) > 0.5f)
         {
             Debug.Log("発生したよ");
-            //Instantiate(_rain, transform.position, Quaternion.identity);
+            Instantiate(_rain, new Vector2(Random.Range(transform.position.x - _offset, transform.position.x + _offset), transform.position.y), Quaternion.identity);
         }
         else
         {
