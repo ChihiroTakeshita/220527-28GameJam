@@ -27,6 +27,4 @@ public class RainFall : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 }
