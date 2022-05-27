@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &913984225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8309461575344749948
+--- !u!1001 &1890287755
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -435,12 +435,12 @@ PrefabInstance:
     - target: {fileID: 8309461576444371848, guid: 94dad833d0d49ba49a65e55b84fd0e36,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.22
+      value: 2.64
       objectReference: {fileID: 0}
     - target: {fileID: 8309461576444371848, guid: 94dad833d0d49ba49a65e55b84fd0e36,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.66
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8309461576444371848, guid: 94dad833d0d49ba49a65e55b84fd0e36,
         type: 3}
@@ -481,11 +481,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8309461576444371850, guid: 94dad833d0d49ba49a65e55b84fd0e36,
-        type: 3}
-      propertyPath: speed
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8309461576444371854, guid: 94dad833d0d49ba49a65e55b84fd0e36,
         type: 3}
