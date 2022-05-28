@@ -15,6 +15,7 @@ public class RainFall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer.color = Color.cyan;
         speed = Random.Range(3, 7);
         _rb = GetComponent<Rigidbody2D>();
         _rb.velocity = new Vector2(-0.6f, -1.0f) * speed;
