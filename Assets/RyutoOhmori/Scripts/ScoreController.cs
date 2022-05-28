@@ -8,13 +8,12 @@ public class ScoreController : MonoBehaviour
     [SerializeField]
     Text _text = default;
 
-    /*[SerializeField]
-    [Tooltip("発生させるエフェクト(パーティクル)")]
-    private ParticleSystem particle;*/
+    [SerializeField]
+    ParticleSystem particle;
 
     int _score = default;
 
-    //int _a = default; 
+    int _a = default; 
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +25,8 @@ public class ScoreController : MonoBehaviour
         _score = GameManager.Score;
 
         _text.text = "スコア:" + _score;
-        //_score++;
-        /*if (_a < _score)
+        _score++;
+        if (_a < _score)
         {
             ParticleSystem newParticle = Instantiate(particle);
             newParticle.transform.position = this.transform.position;
@@ -35,7 +34,7 @@ public class ScoreController : MonoBehaviour
             Destroy(newParticle.gameObject, 5.0f);
         }
 
-        _a = _score;*/
+        _a = _score;
     }
 
     public void UpdateScore(int score)
