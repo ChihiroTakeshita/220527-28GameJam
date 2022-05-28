@@ -20,6 +20,7 @@ public class ScoreController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.StartGame();
         _text.text = "スコア:" + 0;
     }
     // Update is called once per frame
