@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
     {
         if(_hp < 1)
         {
-            SceneManager.LoadScene("GameOver");
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().FinishGame();
+            SceneManager.LoadScene("Result");
         }
 
         float h = Input.GetAxisRaw("Horizontal");

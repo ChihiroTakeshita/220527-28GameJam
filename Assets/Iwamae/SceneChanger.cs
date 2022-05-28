@@ -3,8 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public void Retry()
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Shot");
+        SceneManager.LoadScene("Game");
     }
+
+    public void Result()
+    {
+        SceneManager.LoadScene("Result");
+    }
+
+    //public void Retry()
+    //{
+    //    SceneManager.LoadScene("Shot");
+    //}
 }
