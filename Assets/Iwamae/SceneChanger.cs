@@ -10,11 +10,11 @@ public class SceneChanger : MonoBehaviour
 
     public void Result()
     {
-        SceneManager.LoadScene("Result");
+        SceneManager.LoadScene("result");
     }
 
-    //public void Retry()
-    //{
-    //    SceneManager.LoadScene("Shot");
-    //}
+    public void Retry()
+    {
+        SceneManager.LoadScene("title");
+    }
 }

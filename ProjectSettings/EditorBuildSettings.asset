@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Iwamae/Title.unity
-    guid: 69b831b0c40fb0c489ea928c9ddbf7d7
+    path: Assets/Atobe/Title/title.unity
+    guid: a3e697003b71d0544b9fe37e55a2da0a
   - enabled: 1
     path: Assets/Iwamae/Game.unity
     guid: 20acc13a075f47f47b637b32a091ddc8
   - enabled: 1
-    path: Assets/Iwamae/Result.unity
-    guid: 60a8a999612954749bdde7c852403f37
+    path: Assets/Atobe/Result/result.unity
+    guid: 7aac84f9e6e08e5458f5991523d840bb
   m_configObjects: {}
