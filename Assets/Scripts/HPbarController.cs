@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class HPbarController : MonoBehaviour
 {
-    [SerializeField] int _maxHp = 5;
+    [SerializeField] float _maxHp = 5;
     [SerializeField] Image _image;
-    int currentHp;
+    float currentHp;
     //int pastHp;
     [SerializeField] Slider slider;
     //int Time = default;
