@@ -25,7 +25,7 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _score = GameManager.Score;
+        _score = (int)GameManager.Score;
 
         _text.text = "スコア:" + _score;
         //_score++;
