@@ -8,17 +8,34 @@ public class HPbarController : MonoBehaviour
     [SerializeField] int _maxHp = 5;
     [SerializeField] Image _image;
     int currentHp;
+    //int pastHp;
     [SerializeField] Slider slider;
+    //int Time = default;
     // Start is called before the first frame update
     void Start()
     {
-        slider.value = 1f;
+        slider.value = 1;
         currentHp = _maxHp;
     }
 
     private void Update()
     {
-        //slider.value = (float)currentHp / (float)_maxHp;
+        /*if (slider.value > currentHp / _maxHp)
+        {
+            _image.color = Color.red;
+            Time = 0;
+        }
+        if (Time == 30)
+        {
+            _image.color = Color.green;
+        }*/
+
+
+        slider.value = currentHp / _maxHp;
+        /*if (Time % 200 == 0)
+        {
+            currentHp -= 1;
+        }*/
         if (slider.value < 0.5f)
         {
             _image.color = Color.yellow;
@@ -28,6 +45,8 @@ public class HPbarController : MonoBehaviour
         {
             _image.color = Color.red;
         }
+        //pastHp = currentHp
+        
     }
 
     public void UpdateHp(int hp)
