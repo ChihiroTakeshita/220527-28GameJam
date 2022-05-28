@@ -43,9 +43,8 @@ public class RainFall : MonoBehaviour
             Destroy(HitRain, 0.2f); ←これでエラー出た　
             から、spriteRendererを変更してDestroyする形に変更　*/
         }
-
         //playerに当たった時の挙動を変えたかったです
-        if (other.gameObject.tag == "Player")
+        else if (other.gameObject.tag == "Player")
         {
             col.enabled = false;
 
