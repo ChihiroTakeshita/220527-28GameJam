@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Iwamae/Shot.unity
-    guid: 0509ddd741ededf4a909e431034d3627
+    path: Assets/Iwamae/Title.unity
+    guid: 69b831b0c40fb0c489ea928c9ddbf7d7
   - enabled: 1
-    path: Assets/Iwamae/GameOver.unity
-    guid: d4d97525fd7662b44b9bd18c7a212919
+    path: Assets/Iwamae/Game.unity
+    guid: 20acc13a075f47f47b637b32a091ddc8
+  - enabled: 1
+    path: Assets/Iwamae/Result.unity
+    guid: 60a8a999612954749bdde7c852403f37
   m_configObjects: {}
