@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class RainSound : MonoBehaviour
 {
-    private AudioSource _audio;
-    [SerializeField] AudioClip hitPlayer;
+    [SerializeField] AudioSource _audio;
 
     // Start is called before the first frame update
     void Start()
     {
-        _audio = gameObject.AddComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -23,8 +22,7 @@ public class RainSound : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            _audio.pitch += 0.5f;
-            _audio.PlayOneShot(hitPlayer);
+            _audio.Play();
         }
     }
 }
