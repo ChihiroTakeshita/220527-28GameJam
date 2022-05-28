@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         _startTime = Time.time;
+        Score = 0;
     }
 
 
