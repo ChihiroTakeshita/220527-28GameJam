@@ -11,9 +11,12 @@ public class ScoreController : MonoBehaviour
     [SerializeField]
     ParticleSystem particle;
 
+    [SerializeField] int _effectInterval = default;
+
     int _score = default;
 
-    int _a = default; 
+    int a = 1;
+    //int _a = default; 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +28,16 @@ public class ScoreController : MonoBehaviour
         _score = GameManager.Score;
 
         _text.text = "スコア:" + _score;
-        _score++;
-        if (_a < _score)
+        //_score++;
+        if (_score > _effectInterval * a)
         {
             ParticleSystem newParticle = Instantiate(particle);
             newParticle.transform.position = this.transform.position;
             newParticle.Play();
             Destroy(newParticle.gameObject, 5.0f);
+            a++;
         }
 
-        _a = _score;
     }
 
     public void UpdateScore(int score)
