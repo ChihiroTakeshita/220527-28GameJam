@@ -10,11 +10,15 @@ public class HPbarController : MonoBehaviour
     float currentHp;
     //int pastHp;
     [SerializeField] Slider slider;
+
+    private PlayerController _player;
     //int Time = default;
     // Start is called before the first frame update
     void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         slider.value = 1;
+        _maxHp = _player.HP;
         currentHp = _maxHp;
     }
 
@@ -29,6 +33,8 @@ public class HPbarController : MonoBehaviour
         {
             _image.color = Color.green;
         }*/
+
+        UpdateHp(_player.HP);
 
 
         slider.value = currentHp / _maxHp;
