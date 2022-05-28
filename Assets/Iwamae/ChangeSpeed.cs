@@ -5,12 +5,15 @@ using UnityEngine;
 /// <summary>
 /// 取得すると移動速度が変わるアイテム
 /// </summary>
+[RequireComponent(typeof(BoxCollider2D))]
 public class ChangeSpeed : ItemBase
 {
     [Tooltip("アイテムを取ったら設定されるスピード")]
     [SerializeField] float _setSpeed = 10f;
     [Tooltip("アイテムの効果時間")]
     [SerializeField] float _duration = 1.0f;
+    [Tooltip("ボーナス倍率")]
+    [SerializeField] int _magnification = 2;
 
     float _saveSpeed = 5.0f;
     PlayerController _player;
@@ -30,8 +33,8 @@ public class ChangeSpeed : ItemBase
             if(_player)
             {
                 Debug.Log("SetSpeed");
-                _saveSpeed = _player.Speed;
-                _player.SetSpped = _setSpeed;
+                _saveSpeed = _player.DefaultSpeed;
+                _player.SetSpeed = _setSpeed;
                 StartCoroutine(DurationItem());
             }
         }
@@ -39,8 +42,10 @@ public class ChangeSpeed : ItemBase
 
     IEnumerator DurationItem() 
     {
+        GameManager.Bonus = _magnification;
         yield return new WaitForSeconds(_duration);
-        _player.SetSpped = _saveSpeed;
+        _player.SetSpeed = _saveSpeed;
+        GameManager.Bonus = 1;
         Destroy();
     }
 }
