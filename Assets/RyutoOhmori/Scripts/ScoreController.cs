@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
-    public static ScoreController instance;
+    //public static ScoreController instance;
     [SerializeField]
     Text _text = default;
 
