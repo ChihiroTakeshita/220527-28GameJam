@@ -11,7 +11,7 @@ public class ResultTime : MonoBehaviour
     void Start()
     {
         _timeText.text = "Time :" + GameObject.FindGameObjectWithTag("GameManager").
-            GetComponent<GameManager>().ResultTime.ToString("F2") + "秒";
+            GetComponent<GameManager>().ResultTime.ToString("F2") + "s";
 
     }
 }

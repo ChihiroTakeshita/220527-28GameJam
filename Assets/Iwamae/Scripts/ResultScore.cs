@@ -9,6 +9,6 @@ public class ResultScore : MonoBehaviour
     [SerializeField] Text _scoreText;
     void Start()
     {
-        _scoreText.text = "Score :" + GameManager.Score.ToString("F0") + "点";
+        _scoreText.text = "Score :" + GameManager.Score.ToString("F0") + "P";
     }
 }

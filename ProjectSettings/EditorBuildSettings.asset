@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Atobe/Title/title.unity
     guid: a3e697003b71d0544b9fe37e55a2da0a
   - enabled: 1
-    path: Assets/Iwamae/Game.unity
+    path: Assets/Iwamae/Scenes/Game.unity
     guid: 20acc13a075f47f47b637b32a091ddc8
   - enabled: 1
     path: Assets/Atobe/Result/result.unity

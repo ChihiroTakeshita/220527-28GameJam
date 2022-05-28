@@ -23,12 +23,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    bool _isRight = false;
+
+    Animator _anim;
     Rigidbody2D _rb;
+    SpriteRenderer _sprite;
 
     void Start()
     {
         HpMax = _hp;
         DefaultSpeed = _speed;
+        _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -43,6 +48,23 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         Vector2 dir = new Vector2(h, 0);
         _rb.velocity = dir.normalized * _speed;
+        _anim.SetFloat("Speed", _rb.velocity.magnitude);
+
+        Vector3 scale = transform.localScale;
+        if (h > 0 && !_isRight)
+        {
+            _isRight = true;
+            // 右方向に移動中
+            scale.x *= -1; //（右向き）
+        }
+        else if(h < 0 && _isRight)
+        {
+            _isRight = false;
+            // 左方向に移動中
+            scale.x *= -1; // 反転する（左向き）
+        }
+        // 代入し直す
+        transform.localScale = scale;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
