@@ -1021,6 +1021,7 @@ GameObject:
   - component: {fileID: 1936062132}
   - component: {fileID: 1936062134}
   - component: {fileID: 1936062133}
+  - component: {fileID: 1936062135}
   m_Layer: 5
   m_Name: Time Text
   m_TagString: Untagged
@@ -1044,8 +1045,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72.13602, y: -50}
-  m_SizeDelta: {x: 114.293304, y: 58.196896}
+  m_AnchoredPosition: {x: 15.302, y: -50}
+  m_SizeDelta: {x: 289.1693, y: 58.196896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936062133
 MonoBehaviour:
@@ -1076,8 +1077,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Time:'
 --- !u!222 &1936062134
@@ -1088,6 +1089,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936062131}
   m_CullTransparentMesh: 0
+--- !u!114 &1936062135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936062131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46445878fa85b449ac0ab06373639f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeText: {fileID: 1936062133}
 --- !u!1 &2088081196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1113,7 @@ GameObject:
   - component: {fileID: 2088081197}
   - component: {fileID: 2088081199}
   - component: {fileID: 2088081198}
+  - component: {fileID: 2088081200}
   m_Layer: 5
   m_Name: Score Text
   m_TagString: Untagged
@@ -1122,8 +1137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.000015, y: 21}
-  m_SizeDelta: {x: 152.5651, y: 55.71038}
+  m_AnchoredPosition: {x: 15.3, y: 21}
+  m_SizeDelta: {x: 289.17383, y: 55.71038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088081198
 MonoBehaviour:
@@ -1166,3 +1181,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088081196}
   m_CullTransparentMesh: 0
+--- !u!114 &2088081200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088081196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23ff495f6282a142a4eca227855f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 2088081198}
