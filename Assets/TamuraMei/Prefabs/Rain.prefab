@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8309461576444371849}
   - component: {fileID: 8309461576444371850}
   - component: {fileID: 4370398140528460930}
+  - component: {fileID: 2188259554785378884}
   m_Layer: 0
   m_Name: Rain
   m_TagString: Rain
@@ -136,3 +137,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.09
+--- !u!114 &2188259554785378884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309461576444371854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001c5026f790a544f92311f52859cbfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPlayer: {fileID: 8300000, guid: 69bf3820672712549aac6be4de9cc22f, type: 3}
+  hitField: {fileID: 8300000, guid: c6dfa2f4512afad4d9d72d4843020829, type: 3}
